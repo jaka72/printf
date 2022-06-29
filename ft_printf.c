@@ -6,7 +6,7 @@
 /*   By: jmurovec <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/13 20:18:25 by jmurovec      #+#    #+#                 */
-/*   Updated: 2021/02/13 20:18:25 by jmurovec      ########   odam.nl         */
+/*   Updated: 2022/06/29 11:53:44 by jmurovec      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,37 @@ void	print_result(void)
 		print_c();
 }
 
-int		ft_printf(const char *str, ...)
+
+char *check_color(char *color)
 {
+	//char *clr;
+
+	if (color == NULL)
+		return (NULL);
+	return (color);
+}
+
+
+
+// int		ft_printf(const char *str, ...)
+int		my_printf(char *color, const char *str, ...)
+{
+	if (check_color(color) == NULL)
+		return (0);
+
 	va_list	args;
 
 	va_start(args, str);
 	t_cnt.ch_printed = 0;
+
+	// write(1, color, 7);				// added
+	write(1, color, ft_strlen(color));				// added
+
+
+			
 	while (*str != '\0')
 	{
+
 		if (*str != '%')
 			ft_putchar(*str);
 		else if (*str == '%' && *(str + 1) == '%')
@@ -86,3 +109,5 @@ int		ft_printf(const char *str, ...)
 	va_end(args);
 	return (t_cnt.ch_printed);
 }
+
+

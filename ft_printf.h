@@ -6,7 +6,7 @@
 /*   By: jmurovec <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/13 20:26:39 by jmurovec      #+#    #+#                 */
-/*   Updated: 2021/02/13 20:26:39 by jmurovec      ########   odam.nl         */
+/*   Updated: 2022/06/29 11:44:51 by jmurovec      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ struct	s_flags
 	int	dot;
 }		t_fl;
 
-int		ft_printf(const char *str, ...);
+// int		ft_printf(const char *str, ...);
+int		my_printf(char *color, const char *str, ...);
 void	check_flags(const char **str, va_list args);
 void	find_specifier(char str, va_list args);
 void	put_and_substract(int *n, char c);
