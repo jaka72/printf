@@ -287,3 +287,11 @@ void ints_undefined(void)
 	//ret_mine = ft_printf("Mine: [%0*.*d] \n",2,-2,b);
 	//printf("Orig: %d, Mine: %d\n\n", ret_orig, ret_mine);
 }
+
+
+int main(void)
+{
+	check_ints_all();
+
+	return (0);
+}

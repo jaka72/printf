@@ -1,4 +1,5 @@
 #include "test.h"
+#include <stdio.h>
 
 void check_strings_right(char *x);
 //void check_strings_NULL();
@@ -174,16 +175,26 @@ void check_strings_undef_beh(void)
 {
 	char *s = NULL;
 
-	printf(RED"\n___STRINGS_UNDEFINED_BEHAVIOUR___________________________\n"RESET);
+	printf(RED"\n___STRINGS_UNDEFINED_BEHAVIOUR (printf gives Warning)___________________________\n" RESET);
 
 	printf(BLU"      %%0s       %%0.s   %%0.0s   %%0s         %%-01.10s\n"RESET);
-	//   printf("Orig: [%0s]  [%0.s]    [%0.0s]      [%0s]   [%-01.10s]\n", x,x,x,x,x);
+	   //printf("Orig: [%0s]  [%0.s]    [%0.0s]      [%0s]   [%-01.10s]\n", x,x,x,x,x);
 	ft_printf("Mine: [%0s]  [%0.s]    [%0.0s]      [%0s]   [%-01.10s]\n", x,x,x,x,x);
 
-	printf(RED"\n___STRINGS WITH NULL - UNDEFINED_BEHAVIOUR ________________________\n"RESET);
+	printf(RED"\n___STRINGS WITH NULL - UNDEFINED_BEHAVIOUR ________________________\n" RESET);
 
 	
 	//ret_orig =    printf("Orig: [%9.22s]  [%---s]  [%.*s]\n", s, s, -9,s);
 	ret_mine = ft_printf("Mine: [%9.22s]  [%---s]  [%.*s]\n", s, s, -9,s);
 	printf("Orig: %d, Mine: %d\n\n", ret_orig, ret_mine);
+}
+
+
+
+int main(void)
+{
+
+	check_strings_all();
+
+	return (0);
 }

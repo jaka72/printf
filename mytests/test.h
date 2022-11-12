@@ -1,7 +1,8 @@
 #ifndef TEST_H
 # define TEST_H
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
+#include <unistd.h>
 
 #define BLKB  "\e[40m"
 #define HYEL  "\e[0;93m"
@@ -32,5 +33,9 @@ void check_u_all(void);
 void check_p_all(void);
 void check_mixed(void);
 
-void print_line(char *color);
+void print_line(char *color)
+{
+	printf("\n%s_________________________________________________________________________"RESET, color);
+}
+
 #endif

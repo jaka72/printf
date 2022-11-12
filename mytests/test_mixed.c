@@ -56,3 +56,11 @@ void check_mixed(void)
 	ret_mine = ft_printf("[A] %% %5c%*c%%%05d\n", 'x', 5,'y', 8);
 	printf("Orig: %d, Mine: %d\n\n", ret_orig, ret_mine);
 }
+
+
+int main(void)
+{
+	check_mixed();
+
+	return (0);
+}

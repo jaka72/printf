@@ -44,7 +44,7 @@ void check_hex_right(void)
 	printf("Orig: [%4.4x] [%.4x] [%4.x] [%4.1x] [%1.4x] [%5.3x]\n", g, g, g, g, g, g);
 	ft_printf("Mine: [%4.4x] [%.4x] [%4.x] [%4.1x] [%1.4x] [%5.3x]\n", g, g, g, g, g, g);
 
-	// UNDEVINED_BEHAVIOUR /////////////////////////////////////
+	// UNDEFINED_BEHAVIOUR /////////////////////////////////////
 	//print_line();  // 2 SPACE FLAG
 	printf(BLU"\n__UNDEFINED_BEHAVIOUR___________\n     %% x   %%5 x     %% 05x    %% 0.0x    \n\n"RESET);
 	//   printf("Orig: [% x]  [% 5x]  [% 05x]  [% 0.0x]\n", g, g, g, g);
@@ -180,3 +180,13 @@ void check_ints_left_neg(int g)
 	ft_printf("Mine: [%-4.4x]  [%-.4x]  [%-4.x]  [%-4.1x]  [%-1.4x]  [%-5.3x]\n", g, g, g, g, g, g);
 }
 */
+
+
+
+int main(void)
+{
+
+	check_hex_all();
+
+	return (0);
+}

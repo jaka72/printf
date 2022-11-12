@@ -36,3 +36,13 @@ void check_chars(void)
 	printf(RESET);
 	*/
 }
+
+
+
+int main(void)
+{
+
+	check_chars();
+
+	return (0);
+}
