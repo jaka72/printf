@@ -1,9 +1,7 @@
 
-
-
-#include "ft_printf.h"
 #include <limits.h>
 #include <stdio.h>
+#include "ft_printf.h"
 
 #define BLKB  "\e[40m"
 #define HYEL  "\e[0;93m"
@@ -414,14 +412,18 @@ void test_x()
 int main(void)
 {
 	test_c();
-	test_s();
-	test_p();
-	test_d();
-	test_i();
-	test_u();
-	test_x();
+	// test_s();
+	// test_p();
+	// test_d();
+	// test_i();
+	// test_u();
+	// test_x();
 
-    //printf("new: [%#8x] ", 0x123);
+    // printf("new: [%#8x] \n", 0x123);
+    // printf("new: [%8x] \n", 0x123);
+    // printf("new: [% 8d] \n", 123);
+    // printf("new: [%08x] \n", 0x123);
+    // printf("new: [%-8x] \n", 0x123);
 
 	return (0);
 }
